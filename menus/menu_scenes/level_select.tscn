@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://blrsfe40almof"]
+
+[ext_resource type="Texture2D" uid="uid://dfle8lk75iaqw" path="res://menus/assets/level_select.png" id="1_awvpm"]
+[ext_resource type="Texture2D" uid="uid://1cx7v6u7lbk8" path="res://menus/assets/level_slot.png" id="2_x301e"]
+[ext_resource type="Texture2D" uid="uid://cg81tvc2k28y3" path="res://menus/assets/level_slot_hover.png" id="3_ef71r"]
+
+[node name="LevelSelect" type="Control" unique_id=625618322]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1864092520]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_awvpm")
+
+[node name="Level1" type="TextureButton" parent="TextureRect" unique_id=1912294269]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26500002
+anchor_top = 0.28300002
+anchor_right = 0.34
+anchor_bottom = 0.41700003
+offset_left = -0.2000122
+offset_top = 0.23999023
+offset_right = -0.2000122
+offset_bottom = -0.24002075
+texture_normal = ExtResource("2_x301e")
+texture_hover = ExtResource("3_ef71r")
+
+[node name="Level2" type="TextureButton" parent="TextureRect" unique_id=981901708]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46800002
+anchor_top = 0.31500003
+anchor_right = 0.54300004
+anchor_bottom = 0.44900003
+offset_left = -0.040039063
+offset_top = 0.19998169
+offset_right = -0.040039063
+offset_bottom = -0.2800293
+texture_normal = ExtResource("2_x301e")
+texture_hover = ExtResource("3_ef71r")
+
+[node name="Level3" type="TextureButton" parent="TextureRect" unique_id=999659070]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.725
+anchor_top = 0.30600002
+anchor_right = 0.8
+anchor_bottom = 0.439
+offset_top = -0.32002258
+offset_bottom = -0.08001709
+texture_normal = ExtResource("2_x301e")
+texture_hover = ExtResource("3_ef71r")
+
+[node name="Level4" type="TextureButton" parent="TextureRect" unique_id=1808145657]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.712
+anchor_top = 0.578
+anchor_right = 0.78700006
+anchor_bottom = 0.711
+offset_left = -0.35998535
+offset_top = -0.16000366
+offset_right = -0.36010742
+offset_bottom = 0.07998657
+texture_normal = ExtResource("2_x301e")
+texture_hover = ExtResource("3_ef71r")
+
+[node name="Level5" type="TextureButton" parent="TextureRect" unique_id=1010992188]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47300002
+anchor_top = 0.572
+anchor_right = 0.54800004
+anchor_bottom = 0.70600003
+offset_left = 0.55999756
+offset_top = 0.15997314
+offset_right = 0.5599365
+offset_bottom = -0.32000732
+texture_normal = ExtResource("2_x301e")
+texture_hover = ExtResource("3_ef71r")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1537333844]
