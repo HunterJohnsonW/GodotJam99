@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bu2cpw6duh34n"]
+
+[ext_resource type="Texture2D" uid="uid://bu6vtahkcbi4q" path="res://entities/player/assets/temp_player.png" id="1_symyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abrql"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 0, 557, 850)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ogq8d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abrql")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=168688717]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=521091192]
+sprite_frames = SubResource("SpriteFrames_ogq8d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953544981]
