@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b8yfg6x5433li"]
+
+[ext_resource type="Texture2D" uid="uid://6d6xxvlovrrq" path="res://menus/assets/titleimage.png" id="1_u2nj2"]
+
+[node name="MainMenu" type="Control" unique_id=1312205287]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1286592466]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u2nj2")
+
+[node name="ButtonControl" type="Control" parent="." unique_id=1620638772]
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 1.0
+
+[node name="Play" type="Button" parent="ButtonControl" unique_id=1810909259]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.3
+anchor_right = 0.67800003
+anchor_bottom = 0.42600003
+offset_left = -0.08000183
+offset_top = -1.5258789e-05
+offset_right = 0.07998657
+offset_bottom = 0.27996826
+theme_override_font_sizes/font_size = 48
+text = "PLAY"
+
+[node name="Controls" type="Button" parent="ButtonControl" unique_id=1460308418]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.209
+anchor_top = 0.43600002
+anchor_right = 0.76100004
+anchor_bottom = 0.578
+offset_left = 0.23999023
+offset_top = 0.07998657
+offset_right = -0.040039063
+offset_bottom = -0.16000366
+theme_override_font_sizes/font_size = 48
+text = "CONTROLS"
