@@ -3,11 +3,14 @@
 [ext_resource type="Script" uid="uid://qmmkvo38an54" path="res://game/level.gd" id="1_s6k5d"]
 [ext_resource type="PackedScene" uid="uid://t84twvuivpao" path="res://stages/test_map.tscn" id="2_sgg2w"]
 [ext_resource type="PackedScene" uid="uid://bu2cpw6duh34n" path="res://entities/player/player.tscn" id="3_sgg2w"]
+[ext_resource type="PackedScene" uid="uid://cun151gwxudy5" path="res://camera/camera.tscn" id="4_qo14e"]
 
 [node name="Level1" type="Node2D" unique_id=2091044091]
 script = ExtResource("1_s6k5d")
 
-[node name="TestMap" parent="." unique_id=607974385 instance=ExtResource("2_sgg2w")]
+[node name="Map" parent="." unique_id=607974385 instance=ExtResource("2_sgg2w")]
 
 [node name="Player" parent="." unique_id=168688717 instance=ExtResource("3_sgg2w")]
 position = Vector2(160, 160)
+
+[node name="Camera" parent="." unique_id=841678671 instance=ExtResource("4_qo14e")]

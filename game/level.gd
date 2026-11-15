@@ -9,7 +9,7 @@ var inputs = {"up": Vector2i.UP, "down": Vector2i.DOWN, "left": Vector2i.LEFT, "
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.grid_position = map.get_spawn_position
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -19,7 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
 			player.grid_position += inputs[dir]
-			player.position = player_layer().tile_map.map_to_local(player.grid_position)
+			player.position = player_layer().map_to_local(player.grid_position)
 
 func player_layer() -> Layer:
 	return map.layers.get(player.layer)

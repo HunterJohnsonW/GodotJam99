@@ -3,5 +3,4 @@
 [ext_resource type="Script" uid="uid://52cc241ih4ax" path="res://camera/freecam.gd" id="1_lw1ob"]
 
 [node name="Camera" type="Camera2D" unique_id=841678671]
-zoom = Vector2(0.1, 0.1)
 script = ExtResource("1_lw1ob")

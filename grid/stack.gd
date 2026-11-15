@@ -4,7 +4,6 @@ extends Node2D
 @onready var layer_container = $Layers
 
 @onready var layers : Array[Layer] = []
-# move()
 
 func _ready() -> void:
 	var children = layer_container.get_children()
