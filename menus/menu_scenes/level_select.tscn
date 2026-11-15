@@ -48,6 +48,7 @@ offset_left = -0.040039063
 offset_top = 0.19998169
 offset_right = -0.040039063
 offset_bottom = -0.2800293
+disabled = true
 texture_normal = ExtResource("2_x301e")
 texture_hover = ExtResource("3_ef71r")
 
@@ -60,6 +61,7 @@ anchor_right = 0.8
 anchor_bottom = 0.439
 offset_top = -0.32002258
 offset_bottom = -0.08001709
+disabled = true
 texture_normal = ExtResource("2_x301e")
 texture_hover = ExtResource("3_ef71r")
 
@@ -74,6 +76,7 @@ offset_left = -0.35998535
 offset_top = -0.16000366
 offset_right = -0.36010742
 offset_bottom = 0.07998657
+disabled = true
 texture_normal = ExtResource("2_x301e")
 texture_hover = ExtResource("3_ef71r")
 
@@ -88,6 +91,7 @@ offset_left = 0.55999756
 offset_top = 0.15997314
 offset_right = 0.5599365
 offset_bottom = -0.32000732
+disabled = true
 texture_normal = ExtResource("2_x301e")
 texture_hover = ExtResource("3_ef71r")
 
