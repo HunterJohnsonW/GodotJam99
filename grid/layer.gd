@@ -25,15 +25,15 @@ func _handle_click_drag(viewport: Node, event: InputEvent, shape_idx: int):
 	if event is InputEventMouse:
 		if event.is_action_pressed("click"):
 			moving = true
-			last_mouse_pos = get_viewport().get_mouse_position()
+			last_mouse_pos = get_global_mouse_position()
 			clicked.emit(self)
 
 		if event.is_action_released("click"):
 			_handle_drop()
 
 		if moving:
-			var new_mouse_pos = viewport.get_mouse_position()
-			var direction = new_mouse_pos - last_mouse_pos
+			var new_mouse_pos = get_global_mouse_position()
+			var direction = (new_mouse_pos - last_mouse_pos)
 			position += direction
 			last_mouse_pos = new_mouse_pos
 
