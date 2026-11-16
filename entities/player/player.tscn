@@ -23,6 +23,7 @@ radius = 25.0
 height = 78.0
 
 [node name="Player" type="CharacterBody2D" unique_id=168688717]
+collision_layer = 2
 script = ExtResource("1_abrql")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=521091192]
