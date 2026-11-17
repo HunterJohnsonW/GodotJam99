@@ -2,6 +2,7 @@ class_name Layer
 extends TileMapLayer
 
 @onready var drag_area : Area2D = $DragArea
+@onready var walk_area : Area2D = $DragArea
 
 var moving = false
 var last_mouse_pos : Vector2
