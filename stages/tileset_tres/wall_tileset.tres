@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://bm6kih2oiy1lq"]
 
 [ext_resource type="Texture2D" uid="uid://dfc8m14kn2lgj" path="res://stages/tilemaps/temp_tilemap_walls.png" id="1_g4f0a"]
+[ext_resource type="Texture2D" uid="uid://bn0nuylsg06bb" path="res://stages/tilemaps/floor.png" id="2_o0jpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eywj5"]
 texture = ExtResource("1_g4f0a")
@@ -359,6 +360,23 @@ texture_region_size = Vector2i(64, 64)
 1:7/0/terrains_peering_bit/left_side = 0
 1:7/0/terrains_peering_bit/top_side = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5jr5x"]
+load_path = "res://.godot/imported/dungeon_floor_tiles.png-5dafc2b569ac767e88bc99f98d02fee1.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwejx"]
+texture = SubResource("CompressedTexture2D_5jr5x")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enbu7"]
+texture = ExtResource("2_o0jpc")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
@@ -367,3 +385,5 @@ terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Walls"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_eywj5")
+sources/1 = SubResource("TileSetAtlasSource_vwejx")
+sources/2 = SubResource("TileSetAtlasSource_enbu7")
