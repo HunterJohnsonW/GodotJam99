@@ -12,4 +12,3 @@ func _physics_process(delta: float) -> void:
 
 func player_layer() -> Layer:
 	return map.layers.get(player.layer)
-
