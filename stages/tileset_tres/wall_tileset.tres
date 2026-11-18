@@ -65,7 +65,6 @@ texture_region_size = Vector2i(64, 64)
 0:1/0/terrain = 0
 0:1/0/terrains_peering_bit/bottom_side = 0
 0:1/0/terrains_peering_bit/top_side = 0
-1:1/0 = 0
 2:1/0 = 0
 2:1/0/terrain_set = 0
 3:1/0 = 0
@@ -312,7 +311,6 @@ texture_region_size = Vector2i(64, 64)
 0:6/0/terrains_peering_bit/right_side = 0
 0:6/0/terrains_peering_bit/left_side = 0
 0:6/0/terrains_peering_bit/top_side = 0
-1:6/0 = 0
 2:6/0 = 0
 2:6/0/terrain_set = 0
 2:6/0/terrain = 0
@@ -359,6 +357,8 @@ texture_region_size = Vector2i(64, 64)
 1:7/0/terrains_peering_bit/bottom_side = 0
 1:7/0/terrains_peering_bit/left_side = 0
 1:7/0/terrains_peering_bit/top_side = 0
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5jr5x"]
 
