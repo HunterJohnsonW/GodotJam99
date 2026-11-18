@@ -15,7 +15,6 @@ signal clicked(layer: Layer)
 func _ready() -> void:
 	click_area.input_event.connect(_try_pick_up)
 
-
 func _try_pick_up(viewport: Node, event: InputEvent, shape_idx: int):
 	if event.is_action_pressed("click"):
 		clicked.emit(self)
