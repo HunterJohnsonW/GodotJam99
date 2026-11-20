@@ -11,7 +11,7 @@ script = ExtResource("1_s6k5d")
 [node name="Map" parent="." unique_id=607974385 instance=ExtResource("2_sgg2w")]
 
 [node name="Player" parent="." unique_id=168688717 instance=ExtResource("3_sgg2w")]
-position = Vector2(100, 108)
+position = Vector2(100, 109)
 collision_layer = 1
 
 [node name="Camera" parent="." unique_id=841678671 instance=ExtResource("4_qo14e")]
