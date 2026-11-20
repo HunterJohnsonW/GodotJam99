@@ -3,6 +3,8 @@ extends Node2D
 
 @onready var player: Player = $Player
 @onready var map: Stack = $Map
+@onready var bag: LayerBag = $CanvasLayer/LayerBag
+
 
 func _ready() -> void:
 	for layer in map.layers:
@@ -15,6 +17,8 @@ func player_layer() -> Layer:
 	return map.layers.get(player.layer)
 
 func _try_pick_up(layer: Layer) -> void:
-	print(layer.layer)
 	if !layer.click_area.overlaps_body(player) && layer == map.layers.get(map.layers.size() - 1):
-		layer.visible = false	
+		var removed_layer = map.remove_layer(layer.layer)
+		if removed_layer != null:
+			removed_layer.disable()
+			bag.add_to_bag(removed_layer)

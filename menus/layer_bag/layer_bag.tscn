@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c4fo4nrl43mt5"]
+
+[ext_resource type="Script" uid="uid://s3bbjfqi6gbf" path="res://menus/layer_bag/layer_bag.gd" id="1_f6qpo"]
+
+[node name="LayerBag" type="Control" unique_id=1498185695]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f6qpo")

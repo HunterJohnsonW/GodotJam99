@@ -5,7 +5,7 @@ extends Node2D
 
 @onready var layers : Array[Layer] = []
 
-var collision_tile_set : TileSet = load("res://stages/tileset_tres/wall_tileset.tres")
+@onready var collision_tile_set : TileSet = load("res://stages/tileset_tres/wall_tileset.tres")
 var collision_tile_map : TileMapLayer
 
 func _ready() -> void:
@@ -17,8 +17,8 @@ func _ready() -> void:
 		else:
 			return false)
 	for layer in layers:
-		layer.clicked.connect(build_collision)
-		#layer.clicked.connect(print_layer)
+		layer.removed.connect(build_collision)
+	build_collision(null)
 
 
 func _process(delta: float) -> void:
@@ -33,6 +33,7 @@ func remove_layer(layer_index: int) -> Layer:
 		for layer in layers:
 			layer.layer = i
 			i += 1
+		removed.removed.emit(removed)
 	return removed
 
 func print_layer(layer: Layer) -> void:
@@ -56,11 +57,11 @@ func build_collision(_l: Layer) -> void:
 			if floor_overwrite_idx != -1:
 				new_walls.remove_at(floor_overwrite_idx)
 	
-	remove_child(collision_tile_map)
+	if collision_tile_map != null:
+		remove_child(collision_tile_map)
+
 	collision_tile_map = TileMapLayer.new()
 	collision_tile_map.tile_set = collision_tile_set
 	add_child(collision_tile_map)
-	new_walls.sort()
 	for wall in new_walls:
-		print(wall)
 		collision_tile_map.set_cell(wall, 0, Vector2i(1, 6))
