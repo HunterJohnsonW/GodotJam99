@@ -44,6 +44,11 @@ func print_layer(layer: Layer) -> void:
 	for floor in layer.floor.get_used_cells():
 		print(floor)
 
+func array_remove_dupes(array: Array) -> Array:
+	var temp_dict := {}
+	for element in array:
+		temp_dict[element] = true
+	return Array(temp_dict.keys(), TYPE_VECTOR2I, "", null)
 
 func build_collision(_l: Layer) -> void:
 	# todo: remove existing collision
@@ -52,6 +57,7 @@ func build_collision(_l: Layer) -> void:
 		var wall_cells = layer.wall.get_used_cells()
 		var floor_cells = layer.floor.get_used_cells()
 		new_walls.append_array(wall_cells)
+		new_walls = array_remove_dupes(new_walls)
 		for floor_cell in floor_cells:
 			var floor_overwrite_idx = new_walls.find(floor_cell)
 			if floor_overwrite_idx != -1:

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diy55hncgcid0"]
 
 [ext_resource type="Script" uid="uid://qmmkvo38an54" path="res://game/level.gd" id="1_s6k5d"]
-[ext_resource type="PackedScene" uid="uid://t84twvuivpao" path="res://stages/test_map.tscn" id="2_sgg2w"]
+[ext_resource type="PackedScene" uid="uid://himrjv148to1" path="res://stages/levels/level2/level_2.tscn" id="2_e3oi6"]
 [ext_resource type="PackedScene" uid="uid://bu2cpw6duh34n" path="res://entities/player/player.tscn" id="3_sgg2w"]
 [ext_resource type="PackedScene" uid="uid://cun151gwxudy5" path="res://camera/camera.tscn" id="4_qo14e"]
 [ext_resource type="PackedScene" uid="uid://c4fo4nrl43mt5" path="res://menus/layer_bag/layer_bag.tscn" id="5_e3oi6"]
@@ -9,10 +9,10 @@
 [node name="Level1" type="Node2D" unique_id=2091044091]
 script = ExtResource("1_s6k5d")
 
-[node name="Map" parent="." unique_id=607974385 instance=ExtResource("2_sgg2w")]
+[node name="Map" parent="." unique_id=804506105 instance=ExtResource("2_e3oi6")]
 
 [node name="Player" parent="." unique_id=168688717 instance=ExtResource("3_sgg2w")]
-position = Vector2(100, 109)
+position = Vector2(-133, 631)
 collision_layer = 1
 
 [node name="Camera" parent="." unique_id=841678671 instance=ExtResource("4_qo14e")]
