@@ -5,12 +5,6 @@ var layers: Array[Layer] = []
 
 var held_layer_scene : PackedScene = load("res://menus/held_layer/held_layer.tscn")
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
-
 func _set_layers(l: Array[Layer]):
 	layers = l
 	_build_bag()

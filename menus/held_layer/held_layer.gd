@@ -1,10 +1,8 @@
 class_name HeldLayer
 extends Control
 
-@onready var sub_viewport : SubViewport = $LayerView
-@onready var texture : TextureRect = $Texture
-
-
+@onready var sub_viewport : SubViewport = $SubViewportContainer/SubViewport
+@onready var camera_2d: Camera2D = $SubViewportContainer/SubViewport/Camera2D
 @export var _layer : Layer
 
 func set_layer(layer: Layer):
@@ -13,10 +11,18 @@ func set_layer(layer: Layer):
 func _ready() -> void:
 	if _layer != null:
 		sub_viewport.add_child(_layer)
-		sub_viewport.get_camera_2d().position = _layer.global_wall_position()
-		sub_viewport.size.x = _layer.width() * 64
-		sub_viewport.size.y = _layer.height() * 64
+		camera_2d.position = get_layer_center(_layer.wall)
 
+func get_layer_center(layer: TileMapLayer) -> Vector2:
+	var used_rect := layer.get_used_rect()
+	if used_rect.size == Vector2i.ZERO or layer.tile_set == null:
+		return Vector2.ZERO
+	
+	var tile_size := Vector2(layer.tile_set.tile_size)
+	var top_left := Vector2(used_rect.position) * tile_size
+	var total_size := Vector2(used_rect.size) * tile_size
+	print("Center :", top_left + (total_size * 0.5))
+	return top_left + (total_size * 0.5)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -20,5 +20,6 @@ func _try_pick_up(layer: Layer) -> void:
 	if !layer.click_area.overlaps_body(player) && layer == map.layers.get(map.layers.size() - 1):
 		var removed_layer = map.remove_layer(layer.layer)
 		if removed_layer != null:
+			var layer_to_bag = removed_layer.duplicate()
 			removed_layer.disable()
-			bag.add_to_bag(removed_layer)
+			bag.add_to_bag(layer_to_bag)

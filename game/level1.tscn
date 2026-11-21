@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diy55hncgcid0"]
 
 [ext_resource type="Script" uid="uid://qmmkvo38an54" path="res://game/level.gd" id="1_s6k5d"]
-[ext_resource type="PackedScene" uid="uid://himrjv148to1" path="res://stages/levels/level2/level_2.tscn" id="2_e3oi6"]
+[ext_resource type="PackedScene" uid="uid://himrjv148to1" path="res://stages/levels/level_2.tscn" id="2_e3oi6"]
 [ext_resource type="PackedScene" uid="uid://bu2cpw6duh34n" path="res://entities/player/player.tscn" id="3_sgg2w"]
 [ext_resource type="PackedScene" uid="uid://cun151gwxudy5" path="res://camera/camera.tscn" id="4_qo14e"]
 [ext_resource type="PackedScene" uid="uid://c4fo4nrl43mt5" path="res://menus/layer_bag/layer_bag.tscn" id="5_e3oi6"]
@@ -21,3 +21,7 @@ position = Vector2(637, 359)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1831011162]
 
 [node name="LayerBag" parent="CanvasLayer" unique_id=1498185695 instance=ExtResource("5_e3oi6")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 40.0
