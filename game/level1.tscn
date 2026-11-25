@@ -21,7 +21,8 @@ position = Vector2(637, 359)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1831011162]
 
 [node name="LayerBag" parent="CanvasLayer" unique_id=1498185695 instance=ExtResource("5_e3oi6")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 40.0
+anchor_left = 0.85200006
+anchor_bottom = 0.99600005
+offset_left = 0.4399414
+offset_bottom = -0.12005615
+grow_horizontal = 0

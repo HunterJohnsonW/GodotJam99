@@ -19,6 +19,8 @@ func _ready() -> void:
 func _try_pick_up(viewport: Node, event: InputEvent, shape_idx: int):
 	if event.is_action_pressed("click"):
 		clicked.emit(self)
+	
+	await get_tree().process_frame
 
 # returns the width of the walls
 func width() -> int:

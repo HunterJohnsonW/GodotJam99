@@ -1,12 +1,15 @@
 class_name HeldLayer
-extends Control
+extends SubViewportContainer
 
-@onready var sub_viewport : SubViewport = $SubViewportContainer/SubViewport
-@onready var camera_2d: Camera2D = $SubViewportContainer/SubViewport/Camera2D
+@onready var sub_viewport : SubViewport = $SubViewport
+@onready var camera_2d: Camera2D = $SubViewport/Camera2D
 @export var _layer : Layer
 
 func set_layer(layer: Layer):
 	_layer = layer
+
+func get_layer() -> Layer:
+	return _layer
 
 func _ready() -> void:
 	if _layer != null:

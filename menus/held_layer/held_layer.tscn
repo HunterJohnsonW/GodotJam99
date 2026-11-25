@@ -2,17 +2,12 @@
 
 [ext_resource type="Script" uid="uid://db0fvorl4fsqo" path="res://menus/held_layer/held_layer.gd" id="1_6ylxg"]
 
-[node name="HeldLayer" type="Control" unique_id=1882460998]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_6ylxg")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=465612119]
-layout_mode = 0
+[node name="SubViewportContainer" type="SubViewportContainer" unique_id=465612119]
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_6ylxg")
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=164541316]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=164541316]
 own_world_3d = true
 handle_input_locally = false
 size = Vector2i(128, 128)
@@ -20,5 +15,5 @@ size_2d_override = Vector2i(512, 512)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport" unique_id=1279726327]
+[node name="Camera2D" type="Camera2D" parent="SubViewport" unique_id=1279726327]
 zoom = Vector2(0.7, 0.7)
