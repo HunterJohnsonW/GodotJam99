@@ -7,13 +7,24 @@ extends Node2D
 
 @export var layer : int
 
+var original_node : Layer
+var in_bag : bool = false
+
 var _wall_collision : TileMapLayer
 
 signal clicked(layer: Layer)
 signal removed(layer: Layer)
+signal place_layer(layer: Layer)
 
 func _ready() -> void:
-	click_area.input_event.connect(_try_pick_up)
+	if not in_bag:
+		click_area.input_event.connect(_try_pick_up)
+	else:
+		click_area.input_event.connect(_try_place)
+
+func _try_place(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("click") && in_bag == true:
+		place_layer.emit(self, original_node)
 
 func _try_pick_up(viewport: Node, event: InputEvent, shape_idx: int):
 	if event.is_action_pressed("click"):

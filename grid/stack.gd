@@ -20,7 +20,6 @@ func _ready() -> void:
 		layer.removed.connect(build_collision)
 	build_collision(null)
 
-
 func _process(delta: float) -> void:
 	pass
 
