@@ -5,7 +5,6 @@ extends Node2D
 @onready var wall : TileMapLayer = $Wall
 @onready var floor : TileMapLayer = $Floor
 
-
 @export var layer : int
 
 var _wall_collision : TileMapLayer
@@ -41,8 +40,6 @@ func global_wall_position() -> Vector2:
 	var min_x = xs.min()
 	var min_y = ys.min()
 	return wall.to_global(wall.map_to_local(Vector2i(min_x, min_y)))
-
-	
 
 func disable() -> void:
 	click_area.monitoring = false

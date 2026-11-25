@@ -3,7 +3,8 @@ extends Node2D
 
 @onready var player: Player = $Player
 @onready var map: Stack = $Map
-@onready var bag: LayerBag = $CanvasLayer/LayerBag
+@onready var bag: LayerBag = $CanvasLayer/BG/LayerBag
+#@onready var bag: TextureRect = $CanvasLayer/LayerBag
 
 
 func _ready() -> void:

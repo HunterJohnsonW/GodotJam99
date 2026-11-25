@@ -9,6 +9,7 @@ script = ExtResource("1_6ylxg")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=164541316]
 own_world_3d = true
+transparent_bg = true
 handle_input_locally = false
 size = Vector2i(128, 128)
 size_2d_override = Vector2i(512, 512)
